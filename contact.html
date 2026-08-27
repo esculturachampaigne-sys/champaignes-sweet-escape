@@ -21,8 +21,34 @@
 
 <main>
     <h2>Contact Us</h2>
-    <p>You can reach Champaigne's Sweet Escape through the following:</p>
+    <p>Sweet moments start with a message. Contact us for inquiries or any questions you may have.</p>
     
+    <form action="#">
+        <fieldset>
+            <legend>Your Details</legend>
+
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+             <label for="subject">Subject</label><br>
+        <select id="subject" name="subject">
+            <option value="product">Product Question</option>
+            <option value="order">Order Status</option>
+            <option value="custom">Custom Cake Inquiry</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Something Else</option>
+        </select><br><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="6" cols="40" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </fieldset>
+</form>
+
     <ul>
         <li>Email: champaignesweetescape@gmail.com</li>
         <li>Facebook: Champaigne's Sweet Escape</li>
