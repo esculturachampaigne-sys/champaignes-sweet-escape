@@ -134,7 +134,8 @@ footer {
 
 .product-card {
     background-color: white;
-    border: 3px solid var(--peach);
+    border: 2px solid var(--peach);
+    border-left: 6px solid var(--brand-color);
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 30px;
@@ -150,6 +151,7 @@ footer {
 
 .product-card h3 {
     color: var(--pink);
+    font-size: 1.4rem;
 }
 
 .product-card p {
@@ -183,7 +185,7 @@ fieldset {
 }
 
 legend {
-    color: var(--pink);
+    color: var(--brand-color);
     font-weight: bold;
 }
 
