@@ -62,34 +62,33 @@ p {
    3. LAYOUT REGIONS
 ==================================== */
 
-header {
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     background-color: var(--brand-color);
-    color: var(--dark-ink);
-    text-align: center;
-    padding: 25px;
+    padding: 20px 30px;
 }
 
-nav {
-    background-color: white;
-    padding: 15px;
-    border-bottom: 4px solid var(--pink);
-    text-align: center;
+.site-header nav {
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 /* Navigation */
 
-nav ul {
+.site-header nav ul {
+    display: flex;
+    gap: 20px;
+
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav a {
+.site-header nav a {
     text-decoration: none;
     color: var(--dark-ink);
     font-weight: bold;
@@ -98,7 +97,7 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+.site-header nav a:hover {
     background-color: var(--pink);
     color: white;
 }
@@ -124,10 +123,15 @@ footer {
 /* Shop tagline */
 
 .tagline {
-    text-align: center;
-    color: var(--muted-gray);
-    font-style: italic;
-    margin-bottom: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   height: 120px;
+
+   text-align: center;
+   color: var(--muted-gray);
+   font-style: italic;
 }
 
 /* Product cards */
@@ -258,13 +262,16 @@ hr {
 
 @media (max-width: 768px) {
 
-    header {
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
         padding: 20px 15px;
     }
 
-    nav li {
-        display: block;
-        margin: 10px 0;
+    .site-header nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     main {
