@@ -64,25 +64,24 @@ p {
 
 .page {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "side main"
-        "foot foot";
-    gap: 16px;
-
-    align-items: start;
+        "masthead"
+        "main"
+        "side"
+        "foot";
 }
 
 .site-header {
     grid-area: masthead;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 15px;
 
-    background-color: var(--brand-color);
-    padding: 20px 30px;
+   background-color: var(--brand-color);
+   padding: 20px 15px;
 }
 
 .site-header nav {
@@ -95,7 +94,9 @@ p {
 
 .site-header nav ul {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 
     list-style: none;
     margin: 0;
@@ -118,7 +119,7 @@ p {
 
 main {
     grid-area: main;
-    padding: 30px 20px;
+    padding: 20px 15px;
 }
 
 footer {
@@ -177,11 +178,11 @@ footer {
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 20px;
 }
 
 .product-card {
-    flex: 1 1 240px;
+    flex: 1 1 220px;
 
     background-color: white;
     border: 2px solid var(--peach);
@@ -252,7 +253,7 @@ textarea {
 }
 
 input[type="number"] {
-    width: 120px;
+    width: 100%;
 }
 
 input[type="radio"],
@@ -262,6 +263,7 @@ input[type="checkbox"] {
 }
 
 button {
+    width: 100%;
     background-color: var(--mint);
     color: var(--dark-ink);
     border: none;
@@ -305,40 +307,38 @@ hr {
    5. RESPONSIVE DESIGN
 ==================================== */
 
-@media (max-width: 768px) {
+@media (min-width: 700px) {
+
+    .page {
+         grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side main"
+            "foot foot";
+    }
 
     .site-header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 15px;
-        padding: 20px 15px;
     }
 
     .site-header nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
     }
 
     main {
-        padding: 20px 15px;
-    }
-
-    img {
-        max-width: 100%;
+        padding: 30px 20px;
     }
 
     input[type="number"] {
-        width: 100%;
+        width: 120px;
     }
 
     button {
-        width: 100%;
+        width: auto;
     }
 
-    table {
-        display: block;
-        overflow-x: auto;
-    }
 }
 
 /* ====================================
