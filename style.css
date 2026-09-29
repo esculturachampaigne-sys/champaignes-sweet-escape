@@ -62,7 +62,19 @@ p {
    3. LAYOUT REGIONS
 ==================================== */
 
+.page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "masthead masthead"
+        "side main"
+        "foot foot";
+    gap: 16px;
+}
+
 .site-header {
+    grid-area: masthead;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,12 +115,14 @@ p {
 }
 
 main {
+    grid-area: main;
     max-width: 900px;
     margin: auto;
     padding: 30px 20px;
 }
 
 footer {
+    grid-area: foot;
     background-color: var(--brand-color);
     color: var(--dark-ink);
     text-align: center;
@@ -121,6 +135,23 @@ footer {
 ==================================== */
 
 /* Shop tagline */
+
+.sidebar {
+    grid-area: side;
+    background-color: white;
+    border: 2px solid var(--peach);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
 
 .tagline {
    display: flex;
