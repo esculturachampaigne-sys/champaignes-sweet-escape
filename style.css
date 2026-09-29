@@ -70,6 +70,8 @@ p {
         "side main"
         "foot foot";
     gap: 16px;
+
+    align-items: start;
 }
 
 .site-header {
@@ -116,8 +118,6 @@ p {
 
 main {
     grid-area: main;
-    max-width: 900px;
-    margin: auto;
     padding: 30px 20px;
 }
 
@@ -142,6 +142,7 @@ footer {
     border: 2px solid var(--peach);
     border-radius: 15px;
     padding: 20px;
+    margin: 20px 0 20px 20px;
 }
 
 .sidebar ul {
@@ -150,6 +151,12 @@ footer {
 }
 
 .sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar h2,
+.sidebar h3 {
+    text-align: left;
     margin-bottom: 10px;
 }
 
